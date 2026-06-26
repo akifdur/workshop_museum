@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CinemachineCamera playerCamera;
     [SerializeField] private CinemachineBrain cinemachineBrain;
     [SerializeField] private NavMeshAgent agent;
-    [SerializeField] private PresentationElementBase[] presentationElements;
+    [SerializeField] private PresentationElementsSource presentationElements;
 
     [Header("Movement Settings")]
     [SerializeField] private float movementSpeed = 3f;
@@ -34,8 +34,8 @@ public class PlayerController : MonoBehaviour
         _path = new NavMeshPath();
         
         cinemachineBrain.enabled = false;
-        foreach (var presentationElement in presentationElements) 
-            presentationElement.VirtualCamera.enabled = false;
+        for (int i = 0; i < presentationElements.ElementsCount; i++) 
+            presentationElements.GetElement(i).VirtualCamera.enabled = false;
         
         playerCamera.enabled = true;
         cinemachineBrain.enabled = true;
@@ -46,11 +46,12 @@ public class PlayerController : MonoBehaviour
     
     public void Update()
     {
+        int t = presentationElements.ElementsCount;
         if (Input.GetKeyDown(KeyCode.E))
         {
             var nextPresentationIndex = _activeElementIndex;
             nextPresentationIndex++;
-            nextPresentationIndex = (nextPresentationIndex + presentationElements.Length) % presentationElements.Length;
+            nextPresentationIndex = (nextPresentationIndex + t) % t;
             InitiateMoveToPresentation(nextPresentationIndex);
             return;
         }
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour
         {
             var nextPresentationIndex = _activeElementIndex;
             nextPresentationIndex--;
-            nextPresentationIndex = (nextPresentationIndex + presentationElements.Length) % presentationElements.Length;
+            nextPresentationIndex = (nextPresentationIndex + t) % t;
             InitiateMoveToPresentation(nextPresentationIndex);
             return;
         }
@@ -83,7 +84,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            var presentationElement = presentationElements[_activeElementIndex];
+            var presentationElement = presentationElements.GetElement(_activeElementIndex);
             var currentPresentationCamera = presentationElement.VirtualCamera;
 
             if ((agent.remainingDistance <= agent.stoppingDistance) && 
@@ -124,7 +125,7 @@ public class PlayerController : MonoBehaviour
     {
         playerCamera.transform.DOKill();
 
-        var presentationElement = presentationElements[_activeElementIndex];
+        var presentationElement = presentationElements.GetElement(_activeElementIndex);
         presentationElement.Dismiss();
         agent.enabled = false;
         playerCamera.enabled = true;
@@ -153,10 +154,10 @@ public class PlayerController : MonoBehaviour
 
     private void InitiateMoveToPresentation(int presentationIndex)
     {
-        presentationElements[_activeElementIndex].Dismiss();
+        presentationElements.GetElement(_activeElementIndex).Dismiss();
         
         _activeElementIndex = presentationIndex;
-        var targetCamera = presentationElements[_activeElementIndex].VirtualCamera;
+        var targetCamera = presentationElements.GetElement(_activeElementIndex).VirtualCamera;
         
         var startPosition = transform.position;
         var targetPosition = targetCamera.transform.position;
