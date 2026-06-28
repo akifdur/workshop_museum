@@ -15,7 +15,7 @@ public class PresentationWhatWeDid : MonoBehaviour
     [SerializeField] private Image museumsHolder;
     [SerializeField] private Sprite[] museums;
 
-    [Space] [SerializeField] private Animation curatorsSelection;
+    [Space] [SerializeField] private GameObject curatorsSelection;
     
     [Header("Animation Settings")] 
     [SerializeField] private float fadeDuration = 0.1F;
@@ -65,7 +65,6 @@ public class PresentationWhatWeDid : MonoBehaviour
         _presentationSequence.Join(museumAnimation);
 
         curatorsSelection.gameObject.SetActive(true);
-        curatorsSelection.Play();
     }
 
     private void StopAnimation()
@@ -77,7 +76,6 @@ public class PresentationWhatWeDid : MonoBehaviour
         
         
         curatorsSelection.gameObject.SetActive(false);
-        curatorsSelection.Stop();
     }
     
     private void SetArtifact(Sprite sprite)

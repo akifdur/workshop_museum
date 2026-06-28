@@ -16,17 +16,30 @@ public class PlayVideoOnClick : MonoBehaviour
     private void OnEnable()
     {
         if (presentation != null)
+        {
             presentation.OnPresentationDismiss += StopVideo;
+            presentation.OnPresentationFocus += PlayVideo;
+        }
         
         playButton.onClick.AddListener(OnButtonClicked);
 
         Initialize();
     }
 
+    private void PlayVideo()
+    {
+        videoPlayer.frame = 0;
+        videoPlayer.Play();
+        _isPlaying = true;
+    }
+
     private void OnDisable()
     {
         if (presentation != null)
+        {
             presentation.OnPresentationDismiss -= StopVideo;
+            presentation.OnPresentationFocus -= PlayVideo;
+        }
         
         playButton.onClick.RemoveListener(OnButtonClicked);
 
