@@ -25,6 +25,7 @@ namespace ClosureSystem
     {
         private readonly Action<TContext> _delegate;
         private readonly TContext _context;
+        public TContext Context => _context;
 
         internal Closure(Action<TContext> del, TContext context)
         {
@@ -39,6 +40,7 @@ namespace ClosureSystem
     {
         private readonly Func<TContext, TResult> _delegate;
         private readonly TContext _context;
+        public TContext Context => _context;
 
         internal Closure(Func<TContext, TResult> del, TContext context)
         {
