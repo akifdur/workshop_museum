@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -126,10 +126,10 @@ TextureImporter:
       name: Artifacts_0
       rect:
         serializedVersion: 2
-        x: 194
-        y: 12934
-        width: 1212
-        height: 1018
+        x: 110
+        y: 3811
+        width: 1200
+        height: 824
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,10 +148,10 @@ TextureImporter:
       name: Artifacts_1
       rect:
         serializedVersion: 2
-        x: 364
-        y: 11224
-        width: 872
-        height: 1253
+        x: 1530
+        y: 3396
+        width: 862
+        height: 1238
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,10 +170,10 @@ TextureImporter:
       name: Artifacts_2
       rect:
         serializedVersion: 2
-        x: 358
-        y: 9767
-        width: 884
-        height: 1191
+        x: 2756
+        y: 3396
+        width: 868
+        height: 1240
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: Artifacts_3
       rect:
         serializedVersion: 2
-        x: 378
-        y: 8185
-        width: 841
-        height: 1253
+        x: 4118
+        y: 3396
+        width: 824
+        height: 1239
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,10 +214,10 @@ TextureImporter:
       name: Artifacts_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 6755
-        width: 1600
-        height: 1161
+        x: 110
+        y: 2010
+        width: 1583
+        height: 1150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +236,10 @@ TextureImporter:
       name: Artifacts_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 5692
+        x: 2024
+        y: 2139
         width: 1600
-        height: 789
+        height: 774
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,10 +258,10 @@ TextureImporter:
       name: Artifacts_6
       rect:
         serializedVersion: 2
-        x: 541
-        y: 4173
-        width: 518
-        height: 1253
+        x: 4280
+        y: 1906
+        width: 500
+        height: 1240
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,10 +280,10 @@ TextureImporter:
       name: Artifacts_7
       rect:
         serializedVersion: 2
-        x: 174
-        y: 2668
-        width: 1252
-        height: 1239
+        x: 289
+        y: 482
+        width: 1239
+        height: 1222
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,10 +302,10 @@ TextureImporter:
       name: Artifacts_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1516
+        x: 2022
+        y: 665
         width: 1600
-        height: 870
+        height: 856
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,10 +324,10 @@ TextureImporter:
       name: Artifacts_9
       rect:
         serializedVersion: 2
-        x: 143
-        y: 2
-        width: 1311
-        height: 1241
+        x: 4130
+        y: 416
+        width: 1300
+        height: 1240
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

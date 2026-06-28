@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private int _activeElementIndex;
     private NavMeshPath _path;
     private bool _movementFree;
+    private bool _focused;
 
     private static Vector2 GetMovementInput() => new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
     private static Vector2 GetLookInput() => new(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
@@ -81,6 +82,8 @@ public class PlayerController : MonoBehaviour
         {
             if (GetCameraIsAtViewport(playerCamera)) 
                 HandleFreeMovement();
+
+            _focused = false;
         }
         else
         {
@@ -95,12 +98,17 @@ public class PlayerController : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(targetForward, Vector3.up);
                 playerCamera.transform.localRotation = Quaternion.identity;
 
-                presentationElement.Focus();
+                if (!_focused)
+                {
+                    presentationElement.Focus();
+                    _focused = true;
+                }
             }
             else if(agent.remainingDistance <= 2)
             {
                 currentPresentationCamera.enabled = true;
                 playerCamera.enabled = false;
+                _focused = false;
             }
         }
     }

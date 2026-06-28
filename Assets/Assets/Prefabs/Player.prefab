@@ -132,7 +132,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -140,6 +139,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!114 &3864363192525511412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,7 +367,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -375,6 +374,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &8399817984955020028
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,8 +425,8 @@ MonoBehaviour:
   playerCamera: {fileID: 6483928060497729599}
   cinemachineBrain: {fileID: 3864363192525511412}
   agent: {fileID: 1646244463843076520}
-  presentationElements: []
-  movementSpeed: 3
+  presentationElements: {fileID: 0}
+  movementSpeed: 6
   movementAccelerationTime: 0.1
   mouseSensitivity: {x: 2, y: -4}
   mainCamera: {fileID: 5308081041704314685}
