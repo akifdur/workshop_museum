@@ -2019,7 +2019,7 @@ PrefabInstance:
       objectReference: {fileID: 32900000, guid: ca86b77b4af3a48b29db17859f92ef3e, type: 3}
     - target: {fileID: 5410968215963984767, guid: 525625536ceea48be99219772d8d51cb, type: 3}
       propertyPath: m_PlaybackSpeed
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5410968215963984767, guid: 525625536ceea48be99219772d8d51cb, type: 3}
       propertyPath: 'm_DirectAudioMutes.Array.data[0]'
@@ -2806,7 +2806,7 @@ PrefabInstance:
       objectReference: {fileID: 32900000, guid: 83f32ce266cab46918bd0ab5f753c154, type: 3}
     - target: {fileID: 5410968215963984767, guid: 525625536ceea48be99219772d8d51cb, type: 3}
       propertyPath: m_PlaybackSpeed
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5410968215963984767, guid: 525625536ceea48be99219772d8d51cb, type: 3}
       propertyPath: 'm_DirectAudioMutes.Array.data[0]'
